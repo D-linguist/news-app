@@ -8,12 +8,11 @@
 <h2>Log In</h2>
 <form method="post">
     {% csrf_token %}
-    <div class="form-group col-md-3">
+    <div class="jumbotron form-group col-md-4">
     {{ form|crispy }}
-    </div>
     <button class="btn btn-success ml-2" type="submit">Log In</button>
-    <a href="{% url 'password_reset' %}" class="btn btn-outline-secondary">
-        Forgot your password?</a>
+    <a href="{% url 'password_reset' %}" class="btn btn-secondary ml-4">Forgot your password?</a>
+    </div>
 </form>
 
 {% endblock content %}
