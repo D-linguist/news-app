@@ -141,6 +141,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'authenticatedsender@yandex.ru'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
